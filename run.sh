@@ -6,7 +6,7 @@ set -e
 #export SMTP_PORT="465"
 #
 if [ ! -f /db/ffplayout.db ]; then
-    ffplayout -i -u admin -p admin -m contact@example.com --storage "/tv-media" --playlists "/playlists" --public "/public" --logs "/logging" --smtp-server "${SMTP_SERVER:-mail.example.org}" --smtp-user "${SMTP_USER:-admin@example.org}" --smtp-password "${SMTP_PASSWORD:-}"  --smtp-port 465 --smtp-starttls false
+    ffplayout -i -u admin -p admin -m contact@example.com --storage "/tv-media" --playlists "/playlists" --public "/public" --logs "/logging" 
 fi
-
+#
 /usr/bin/ffplayout -l "0.0.0.0:8787"
